@@ -52,5 +52,5 @@ Your Name Here
 
 If you have any questions or need further assistance, feel free to reach out:
 
-- Email: your-email@example.com
-- GitHub: [your-github-username](https://github.com/your-github-username)
+- Email: inaciorodrigues395@gmail.com
+- GitHub: [https://github.com/InacioRodrigues](https://github.com/InacioRodrigues)
