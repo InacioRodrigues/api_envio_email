@@ -1,28 +1,33 @@
-API de serviço de e-mail
-Este projeto é uma API RESTful desenvolvida usando o framework NestJS. Ele serve como um serviço de email que permite aos usuários enviar emails por meio de um endpoint. A API utiliza Prisma para interações com banco de dados e Nodemailer para envio de emails.
-
+#API de serviço de e-mail
 Descrição
-A API Email Service consiste em três partes principais:
+A API Email Service é uma API RESTful projetada para facilitar o envio de emails. Construído com NestJS, ele aproveita o Prisma para gerenciamento de banco de dados e o Nodemailer para lidar com a entrega de e-mail. Esta API fornece uma interface simples para enviar e-mails de boas-vindas aos usuários.
 
-Email Service ( email.service.ts) : Este serviço trata da lógica de criação de um registro de email no banco de dados e envio de um email usando Nodemailer.
-Controlador de e-mail ( email.controller.ts) : Este controlador expõe um endpoint HTTP POST ( /email/envio-email) que aciona o processo de envio de e-mail.
-Configuração do Nodemailer ( nodemailer.lib.ts) : Este arquivo configura o transportador Nodemailer com configurações SMTP de variáveis ​​de ambiente.
-Começando
-Para executar o projeto localmente, siga estas etapas:
+#Características
+Integração de banco de dados com Prisma para armazenamento de registros de email.
+Transmissão segura de e-mail usando Nodemailer com configurações SMTP configuráveis.
+Endpoint para acionar processos de envio de e-mail.
 
-Clone o repositório.
-Instale as dependências do projeto com npm install.
-Configure as variáveis ​​de ambiente necessárias para a configuração do Nodemailer.
-Inicie o aplicativo com npm run start.
-Pontos finais
-POST /email/envio-email : Aceita um endereço de email no corpo da solicitação e envia um email de boas-vindas para o endereço fornecido.
-variáveis ​​ambientais
-Certifique-se de que as seguintes variáveis ​​de ambiente estejam definidas corretamente para a configuração do Nodemailer:
+#Começando
+Pré-requisitos
+Node.js instalado em sua máquina local.
+Compreensão básica de TypeScript e NestJS.
+Instalação
+Clone o repositório em sua máquina local.
+Execute npm installpara instalar as dependências necessárias.
+Configure as variáveis ​​de ambiente para a configuração do Nodemailer (consulte .env.example).
+Inicie o servidor de desenvolvimento com npm run start:dev.
 
-NODEMAILER_HOST: o nome do host do servidor SMTP.
-NODEMAILER_PORT: o número da porta do servidor SMTP.
-NODEMAILER_USER: o nome de usuário para autenticação do servidor SMTP.
-NODEMAILER_PASSWORD: a senha para autenticação do servidor SMTP.
+#Uso
+Para enviar um email, faça uma solicitação POST ao /email/envio-emailendpoint com o endereço de email do destinatário no corpo da solicitação.
+http://localhost:3000/email/envio-email
+json: email: "teste@gmail.com"
+
+Contribuindo
+Contribuições são bem-vindas! Por favor, leia as diretrizes de contribuição antes de começar e 
+sinta-se à vontade para entrar em contato por qualquer um desses canais se tiver dúvidas ou precisar de mais assistência com o projeto.
+
+Licença
+Este projeto está licenciado sob a licença MIT. Veja o LICENSEarquivo para detalhes.
 
 Autor
 Inácio Rodrigues
@@ -32,4 +37,3 @@ E-mail: inaciorodrigues395@gmail.com
 
 GitHub: InacioRodrigues
 
-Sinta-se à vontade para entrar em contato por qualquer um desses canais se tiver dúvidas ou precisar de mais assistência com o projeto.
