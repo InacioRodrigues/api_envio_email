@@ -1,73 +1,35 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+API de serviço de e-mail
+Este projeto é uma API RESTful desenvolvida usando o framework NestJS. Ele serve como um serviço de email que permite aos usuários enviar emails por meio de um endpoint. A API utiliza Prisma para interações com banco de dados e Nodemailer para envio de emails.
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Descrição
+A API Email Service consiste em três partes principais:
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Email Service ( email.service.ts) : Este serviço trata da lógica de criação de um registro de email no banco de dados e envio de um email usando Nodemailer.
+Controlador de e-mail ( email.controller.ts) : Este controlador expõe um endpoint HTTP POST ( /email/envio-email) que aciona o processo de envio de e-mail.
+Configuração do Nodemailer ( nodemailer.lib.ts) : Este arquivo configura o transportador Nodemailer com configurações SMTP de variáveis ​​de ambiente.
+Começando
+Para executar o projeto localmente, siga estas etapas:
 
-## Description
+Clone o repositório.
+Instale as dependências do projeto com npm install.
+Configure as variáveis ​​de ambiente necessárias para a configuração do Nodemailer.
+Inicie o aplicativo com npm run start.
+Pontos finais
+POST /email/envio-email : Aceita um endereço de email no corpo da solicitação e envia um email de boas-vindas para o endereço fornecido.
+variáveis ​​ambientais
+Certifique-se de que as seguintes variáveis ​​de ambiente estejam definidas corretamente para a configuração do Nodemailer:
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+NODEMAILER_HOST: o nome do host do servidor SMTP.
+NODEMAILER_PORT: o número da porta do servidor SMTP.
+NODEMAILER_USER: o nome de usuário para autenticação do servidor SMTP.
+NODEMAILER_PASSWORD: a senha para autenticação do servidor SMTP.
 
-## Installation
+Autor
+Inácio Rodrigues
 
-```bash
-$ npm install
-```
+Informações de contato
+E-mail: inaciorodrigues395@gmail.com
 
-## Running the app
+GitHub: InacioRodrigues
 
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+Sinta-se à vontade para entrar em contato por qualquer um desses canais se tiver dúvidas ou precisar de mais assistência com o projeto.
