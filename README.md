@@ -46,7 +46,7 @@ This project is licensed under the MIT License. For more information, please see
 
 ## Author
 
-Your Name Here
+Inácio Rodrigues
 
 ## Contact
 
