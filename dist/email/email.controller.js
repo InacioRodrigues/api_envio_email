@@ -31,7 +31,7 @@ let EmailController = class EmailController {
 };
 exports.EmailController = EmailController;
 __decorate([
-    (0, common_1.Post)('envio-email'),
+    (0, common_1.Post)('api/v1/envio-email'),
     __param(0, (0, common_1.Body)('email')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),

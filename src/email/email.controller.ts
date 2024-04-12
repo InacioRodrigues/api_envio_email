@@ -5,7 +5,7 @@ import { EmailService } from './email.service';
 export class EmailController {
   constructor(private readonly emailService: EmailService) {}
 
-  @Post('envio-email')
+  @Post('api/v1/envio-email')
   async email(@Body('email') email: string) {
     try {
       await this.emailService.createEmail(email);
